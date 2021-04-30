@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<title> random color generator</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style>
+    body{
+        position: absolute;
+  width: 300px;
+  height: 200px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+
+    }
+    span{
+        text-shadow:4px 4px 8px blue;
+
+    }
+    
+
+</style>
+
+<div class="mx-auto" style="width: 200px;">
+<div class="card">
+    <div class="card-body">
+<div class='color'>
+<span id='hex' >#e7c3c</span>
+</div>
+<body>
+<button class="btn btn-dark" onclick="get()" >set new color</button>
+
+<script type="text/javascript">
+    function get(){
+        var symb,color;
+        symb="0123456789ABCDEF"
+
+        color="#"
+        for(var i=0;i<6;i++){
+            color=color+ symb[Math.floor(Math.random()*16)];
+            document.body.style.background=color;
+            document.getElementById("hex").innerHTML=color;
+
+
+        }
+
+    }
+</script>
+</body>
